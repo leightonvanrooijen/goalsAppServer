@@ -1,0 +1,17 @@
+schema {
+    query: Query
+}
+
+type Query  {
+    goal(id: ID!): Goal!
+    goals(): [Goal!]!
+    subgoals(id: ID!): [Goal!]!
+}
+
+type Goal {
+    id: ID
+	name: String
+	description: String
+	parentID: Int
+    goals: [Goal!]!
+}
