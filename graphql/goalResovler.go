@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/goalsApp/server/db"
+
 	"github.com/graph-gophers/graphql-go"
 )
 

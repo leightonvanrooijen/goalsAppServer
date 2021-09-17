@@ -12,8 +12,8 @@ type Goal struct {
 	gorm.Model
 	Name        string
 	Description string
-	ParentID int32
-	Parent *Goal `gorm:"foreignkey:ParentID"`
+	ParentID    int32
+	Parent      *Goal `gorm:"foreignkey:ParentID"`
 }
 
 type DB struct {
@@ -22,7 +22,7 @@ type DB struct {
 
 func Connect() DB {
 	db, err := gorm.Open(mysql.Open(
-		"leighton:123456@tcp(127.0.0.1:3307)/goalsApp?parseTime=true"), &gorm.Config{
+		"root:root@tcp(database:3306)/golang-docker?parseTime=true"), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
 	})
 

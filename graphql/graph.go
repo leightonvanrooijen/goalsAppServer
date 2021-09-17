@@ -2,11 +2,11 @@ package graph
 
 import (
 	"fmt"
+	"github.com/goalsApp/server/db"
 	"io/ioutil"
 	"log"
 	"net/http"
 
-	"github.com/goalsApp/server/db"
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/relay"
 )
