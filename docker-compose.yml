@@ -20,8 +20,6 @@ services:
     image: mysql:5.7.35
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
       MYSQL_DATABASE: golang-docker
     container_name: golang-docker-db
     ports:

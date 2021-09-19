@@ -4,8 +4,6 @@ import (
 	"fmt"
 
 	"github.com/goalsApp/server/db"
-
-	"github.com/graph-gophers/graphql-go"
 )
 
 type RootResolver struct {
@@ -80,10 +78,9 @@ func (g *GoalResolver) Name() *string {
 }
 
 // Gets name for user
-func (g *GoalResolver) Id() *graphql.ID {
-	goalID := graphql.ID(fmt.Sprint(&g.goal.ID))
-
-	return &goalID
+func (g *GoalResolver) Id() *int32 {
+	id := int32(g.goal.ID)
+	return &id
 }
 
 // Gets name for user

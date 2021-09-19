@@ -9,7 +9,7 @@ type Query  {
 }
 
 type Goal {
-    id: ID
+    id: Int
 	name: String
 	description: String
 	parentID: Int
